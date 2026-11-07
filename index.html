@@ -8,6 +8,9 @@
 <meta property="og:title" content="Kailash Kumar, Video Editor and Motion Designer">
 <meta property="og:description" content="Watch the showreel, reels and YouTube edits, then send your brief.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://itssonudh-hub.github.io/kk-portfolio/">
+<meta property="og:image" content="https://itssonudh-hub.github.io/kk-portfolio/images/kailash.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23E8421B'/%3E%3Ctext x='32' y='47' font-size='40' font-weight='700' text-anchor='middle' fill='white' font-family='Arial'%3EK%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,8 +40,11 @@ p{margin:0}
 .hero h1{font-size:clamp(84px,27vw,290px);line-height:.85}
 .hero .role{font-family:var(--goth);font-size:clamp(26px,6vw,46px);color:var(--accent);margin-top:8px}
 .hero .meta{margin-top:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:13px}
+.links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:22px}
+.links a{display:inline-block;border:2px solid var(--fg);padding:8px 18px;font-weight:600;font-size:15px;text-decoration:none;background:var(--paper);color:#0B0B0B;box-shadow:3px 4px 0 rgba(0,0,0,.22);transition:background .15s,color .15s}
+.links a:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.links a[hidden]{display:none}
 
-/* black bands with torn top edge and ticker */
 .band{background:var(--band);color:var(--bandfg);position:relative;padding:16px 0;overflow:hidden;margin:20px 0}
 .band::before{content:"";position:absolute;left:0;right:0;top:0;height:8px;background:linear-gradient(135deg,var(--bg) 25%,transparent 25%) -8px 0,linear-gradient(225deg,var(--bg) 25%,transparent 25%) -8px 0;background-size:16px 8px}
 .tick{display:flex;width:max-content;animation:run 26s linear infinite}
@@ -80,6 +86,11 @@ section{padding:48px 0}
 .player video{width:100%;height:100%;display:block;object-fit:contain;background:#000}
 
 .work{padding-top:36px}
+.tabs{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 34px}
+.tab{font:inherit;font-weight:600;padding:10px 20px;border:2px solid var(--fg);background:var(--paper);color:#0B0B0B;cursor:pointer;box-shadow:3px 4px 0 rgba(0,0,0,.22);justify-self:auto}
+.tab[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+.grp{margin-bottom:48px}
+.grp h3{display:inline-block;font-size:clamp(28px,5vw,42px);margin-bottom:18px;padding-bottom:4px;border-bottom:3px solid var(--accent)}
 .vgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px 12px}
 @media(min-width:800px){.vgrid{grid-template-columns:repeat(4,1fr)}}
 .longs{display:grid;gap:22px}
@@ -88,8 +99,17 @@ section{padding:48px 0}
 .vt video{width:100%;aspect-ratio:9/16;object-fit:cover;display:block;border:2px solid var(--fg);background:#000}
 .vt.h video{aspect-ratio:16/9;object-fit:contain}
 .vt figcaption{font-weight:600;font-size:15px;margin-top:8px}
+.msg{font-weight:600;padding:8px 0}
 
-/* client words, same paper-note look */
+.cw{display:grid;gap:34px 24px;grid-template-columns:1fr}
+@media(min-width:760px){.cw{grid-template-columns:repeat(3,1fr)}}
+.cw .note{min-height:0;padding:36px 20px 24px}
+.cw .note small{display:block;color:var(--accent);font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.cw .note p{font-size:15px;color:#2d2d2d}
+.cw .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.cw .tags span{border:2px solid #0B0B0B;padding:3px 10px;font-weight:600;font-size:13px;background:#fff}
+.cw .stat{display:block;margin-top:12px;font-family:var(--disp);font-size:30px;line-height:1;color:var(--accent);text-transform:uppercase}
+.cw-note{font-size:15px;margin-top:22px;max-width:36em}
 .words{display:grid;gap:34px 24px;grid-template-columns:1fr}
 @media(min-width:760px){.words{grid-template-columns:repeat(2,1fr)}.words .note:last-child{grid-column:1/-1}}
 .words .note{min-height:0;padding:36px 22px 24px}
@@ -108,10 +128,13 @@ textarea{min-height:100px}
 button{font:inherit;font-weight:600;background:var(--accent);color:#fff;border:0;padding:15px 24px;cursor:pointer;justify-self:start}
 #s{min-height:22px;font-size:14px;color:#c8c8c2}
 footer{background:var(--band);color:#9a9a94;padding:0 0 30px;font-size:14px}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;border-top:1px solid #333;padding-top:20px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;border-top:1px solid #333;padding-top:20px}
+footer .fl{display:flex;flex-wrap:wrap;gap:18px}
+footer a{color:#e6e6e0;text-underline-offset:3px}
+footer a[hidden]{display:none}
 .float{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:40;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;padding:12px 22px;border-radius:999px;box-shadow:3px 5px 0 rgba(0,0,0,.35);transition:opacity .2s}
 .float.off{opacity:0;pointer-events:none}
-@media (prefers-reduced-motion:reduce){.tick{animation:none}html{scroll-behavior:auto}.float{transition:none}}
+@media (prefers-reduced-motion:reduce){.tick{animation:none}html{scroll-behavior:auto}.float,.links a{transition:none}}
 </style>
 </head>
 <body>
@@ -122,6 +145,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;b
     <h1>Kailash</h1>
     <p class="role">Video Editor and Motion Designer</p>
     <p class="meta">India &nbsp;/&nbsp; Portfolio 2026</p>
+    <div class="links" aria-label="Find me online">
+      <a href="https://instagram.com/itskailashkumar" target="_blank" rel="noopener">Instagram</a>
+      <a href="#" data-li target="_blank" rel="noopener" hidden>LinkedIn</a>
+      <a href="https://digitalimax.com" target="_blank" rel="noopener">Digital IMAX website</a>
+    </div>
   </header>
 </div>
 
@@ -131,15 +159,14 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;b
 </div></div>
 
 <section class="wrap about" id="about">
-  <!-- PHOTO: put the cutout photo at images/kailash.png. If the file is missing, this block hides itself. -->
   <div class="photo"><img src="images/kailash.png" alt="Kailash Kumar editing on a laptop" onerror="this.closest('.about').classList.add('nophoto');this.parentNode.remove()"></div>
   <div>
     <h2>Hello</h2>
     <p>I am Kailash Kumar, a video editor and graphic designer based in India. I edit reels, YouTube videos and ads, and I add motion graphics and VFX where a video needs more punch. I also run content and growth for brands through my agency, Digital IMAX.</p>
     <div class="chips"><span>Video editing</span><span>Motion graphics</span><span>VFX</span><span>Graphic design</span><span>Social growth</span></div>
     <div class="exp">
-      <div><b>Creator</b><br>Edit With Kailash, editing tips and tutorials (@itskailashkumar)</div>
-      <div><b>Co-founder</b><br><a href="https://digitalimax.com" rel="noopener">Digital IMAX</a>, a digital marketing and content agency</div>
+      <div><b>Creator</b><br>Edit With Kailash, editing tips and tutorials (<a href="https://instagram.com/itskailashkumar" target="_blank" rel="noopener">@itskailashkumar</a>)</div>
+      <div><b>Co-founder</b><br><a href="https://digitalimax.com" target="_blank" rel="noopener">Digital IMAX</a>, a digital marketing and content agency</div>
     </div>
   </div>
 </section>
@@ -161,40 +188,58 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;b
 <section class="show" id="showreel">
   <div class="wrap">
     <h2>Show<b>reel</b></h2>
-    <div class="player"><video controls playsinline preload="metadata" src="videos/showreel.mp4#t=0.8"></video></div>
+    <div class="player"><video id="reelvid" controls playsinline muted loop preload="none" data-src="videos/showreel.mp4#t=0.8"></video></div>
   </div>
 </section>
 
 <div class="band" aria-hidden="true"><div class="tick">
-  <span>Social media and reels</span><span>Social media and reels</span><span>Social media and reels</span><span>Social media and reels</span>
-  <span>Social media and reels</span><span>Social media and reels</span><span>Social media and reels</span><span>Social media and reels</span>
+  <span>Selected work</span><span>Selected work</span><span>Selected work</span><span>Selected work</span>
+  <span>Selected work</span><span>Selected work</span><span>Selected work</span><span>Selected work</span>
 </div></div>
 
-<!-- REELS (vertical). To add one more, copy a <figure> line, change the file name and caption. -->
 <section class="wrap work" id="work">
-  <div class="vgrid">
-    <figure class="vt"><video controls playsinline preload="metadata" src="videos/reel-01.mp4#t=0.8"></video><figcaption>2D motion reel</figcaption></figure>
-    <figure class="vt"><video controls playsinline preload="metadata" src="videos/reel-02.mp4#t=0.8"></video><figcaption>Raw vs final edit</figcaption></figure>
-    <figure class="vt"><video controls playsinline preload="metadata" src="videos/reel-03.mp4#t=0.8"></video><figcaption>Editing is storytelling</figcaption></figure>
-    <figure class="vt"><video controls playsinline preload="metadata" src="videos/reel-04.mp4#t=0.8"></video><figcaption>Educational reel, motion overlays</figcaption></figure>
-    <figure class="vt"><video controls playsinline preload="metadata" src="videos/reel-05.mp4#t=0.8"></video><figcaption>Trial reels explained</figcaption></figure>
-    <figure class="vt"><video controls playsinline preload="metadata" src="videos/reel-06.mp4#t=0.8"></video><figcaption>Viral talking head motion</figcaption></figure>
-    <figure class="vt"><video controls playsinline preload="metadata" src="videos/reel-07.mp4#t=0.8"></video><figcaption>Why consistency beats virality</figcaption></figure>
-    <figure class="vt"><video controls playsinline preload="metadata" src="videos/reel-08.mp4#t=0.8"></video><figcaption>2D text to 3D in After Effects</figcaption></figure>
-  </div>
+  <div class="tabs" id="tabs" role="group" aria-label="Filter work" hidden></div>
+  <p class="msg" id="loadmsg">Loading videos...</p>
+  <div id="groups"></div>
 </section>
 
-<div class="band" aria-hidden="true"><div class="tick">
-  <span>YouTube videos</span><span>YouTube videos</span><span>YouTube videos</span><span>YouTube videos</span>
-  <span>YouTube videos</span><span>YouTube videos</span><span>YouTube videos</span><span>YouTube videos</span>
-</div></div>
-
-<!-- YOUTUBE / WIDE VIDEOS -->
-<section class="wrap work">
-  <div class="longs">
-    <figure class="vt h"><video controls playsinline preload="metadata" src="videos/long-01.mp4#t=0.8"></video><figcaption>Before and after, Day 1 of 90 daily edits</figcaption></figure>
-    <figure class="vt h"><video controls playsinline preload="metadata" src="videos/long-02.mp4#t=0.8"></video><figcaption>AI SaaS product animation</figcaption></figure>
+<section class="wrap" id="clients">
+  <h2 class="sec-t">Client <span>work</span></h2>
+  <div class="cw">
+    <div class="note">
+      <small>NGO, Ranchi. Active since March 2026</small>
+      <h3>Krishna Sarthi</h3>
+      <p>Video editing, creatives and social media content for an ongoing full-scope project.</p>
+      <span class="stat">1.7M+ Instagram views</span>
+      <p style="margin-top:6px;font-size:13px">March to August 2026</p>
+      <div class="tags"><span>Video editing</span><span>Creatives</span><span>Social media</span></div>
+    </div>
+    <div class="note">
+      <small>Food and beverage, Hyderabad. Active</small>
+      <h3>Das Fastfood</h3>
+      <p>Video editing, image editing and menu design for their social media and menu.</p>
+      <div class="tags"><span>Video editing</span><span>Image editing</span><span>Menu design</span></div>
+    </div>
+    <div class="note">
+      <small>Photography, Kolkata. Active</small>
+      <h3>King Brother’s Photography</h3>
+      <p>Ongoing photo, video and teaser editing for wedding and marriage content.</p>
+      <div class="tags"><span>Photo editing</span><span>Video editing</span><span>Teasers</span></div>
+    </div>
+    <div class="note">
+      <small>Education YouTube channel, Jharkhand. New client</small>
+      <h3>Maths by Mustaque Sir</h3>
+      <p>Video editing for the channel, from raw footage to the final cut.</p>
+      <div class="tags"><span>Video editing</span></div>
+    </div>
+    <div class="note">
+      <small>Content creator, Delhi. Past</small>
+      <h3>Vimal Singh</h3>
+      <p>Edited motivational videos, images and influencer-style content across platforms.</p>
+      <div class="tags"><span>Video editing</span><span>Image editing</span></div>
+    </div>
   </div>
+  <p class="cw-note">Kailash edits the video and creative work for every client project. All of it is done through <a href="https://digitalimax.com/our-work.php" target="_blank" rel="noopener">Digital IMAX</a>. See the full list on the agency site.</p>
 </section>
 
 <section class="wrap" id="reviews">
@@ -224,41 +269,249 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;b
   </div>
 </section>
 
-<footer><div class="wrap"><span>Kailash Kumar, India</span><a href="https://instagram.com/itskailashkumar">@itskailashkumar</a></div></footer>
+<footer>
+  <div class="wrap">
+    <span>Kailash Kumar, India</span>
+    <div class="fl">
+      <a href="https://instagram.com/itskailashkumar" target="_blank" rel="noopener">Instagram</a>
+      <a href="#" data-li target="_blank" rel="noopener" hidden>LinkedIn</a>
+      <a href="https://digitalimax.com" target="_blank" rel="noopener">digitalimax.com</a>
+    </div>
+  </div>
+</footer>
 <a class="float" id="fl" href="#hire">Hire me</a>
 
 <script>
+/* ================= EDIT HERE ================= */
+
+/* LinkedIn profile link. Paste the full link, e.g. 'https://www.linkedin.com/in/your-name'. Leave '' to hide the button. */
+var LINKEDIN = 'https://www.linkedin.com/in/kailash-kumar0/';
+
 /* WhatsApp number with country code, no plus or spaces. Example: '919XXXXXXXXX'. Leave '' to use Instagram only. */
 var WHATSAPP = '';
 
-(function(){
-  /* only one video plays at a time */
-  document.addEventListener('play',function(e){
-    if(e.target.tagName!=='VIDEO')return;
-    var all=document.querySelectorAll('video');
-    for(var i=0;i<all.length;i++){if(all[i]!==e.target)all[i].pause();}
-  },true);
+/* Your GitHub repo (needed for the automatic video list). */
+var GITHUB_USER = 'itssonudh-hub';
+var GITHUB_REPO = 'kk-portfolio';
 
-  var s=document.getElementById('s'),wa=document.getElementById('wa'),go=document.getElementById('go');
-  if(WHATSAPP){
-    wa.href='https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent('Hi Kailash, I saw your portfolio and want to talk about a project.');
-    wa.hidden=false;
-    go.textContent='Send brief on WhatsApp';
-    document.getElementById('hl').textContent='Chat on WhatsApp, or fill the brief and send it there.';
-  }
-  document.getElementById('brief').addEventListener('submit',function(e){
-    e.preventDefault();
-    var g=function(i){return document.getElementById(i).value.trim()||'-'};
-    var t='Hi Kailash, I want to hire you.\nName: '+g('n')+'\nNeed: '+g('f')+'\nDeadline: '+g('d')+'\nProject: '+g('m');
-    if(WHATSAPP){s.textContent='Opening WhatsApp.';window.open('https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent(t),'_blank','noopener');return;}
-    var open=function(msg){s.textContent=msg;window.open('https://ig.me/m/itskailashkumar','_blank','noopener')};
-    try{navigator.clipboard.writeText(t).then(function(){open('Brief copied. Paste it in the DM.')},function(){open('Open the DM and type your brief.')})}
-    catch(x){open('Open the DM and type your brief.')}
+/* Video groups. Upload videos into each folder and they appear automatically.
+   The caption is the file name, so name files like: Raw vs final edit.mp4
+   layout: 'tall' for vertical reels (9:16), 'wide' for horizontal videos (16:9).
+   pinned: videos you already uploaded with a fixed name and caption. Missing files are skipped automatically. */
+var GROUPS = [
+  { key: 'reels', title: 'Reels', path: 'videos/reels', layout: 'tall', pinned: [
+    { file: 'videos/reel-01.mp4', caption: '2D motion reel' },
+    { file: 'videos/reel-02.mp4', caption: 'Raw vs final edit' },
+    { file: 'videos/reel-03.mp4', caption: 'Editing is storytelling' },
+    { file: 'videos/reel-04.mp4', caption: 'Educational reel, motion overlays' },
+    { file: 'videos/reel-05.mp4', caption: 'Trial reels explained' },
+    { file: 'videos/reel-06.mp4', caption: 'Viral talking head motion' },
+    { file: 'videos/reel-07.mp4', caption: 'Why consistency beats virality' },
+    { file: 'videos/reel-08.mp4', caption: '2D text to 3D in After Effects' }
+  ] },
+  { key: 'youtube', title: 'YouTube videos', path: 'videos/youtube', layout: 'wide', pinned: [
+    { file: 'videos/long-01.mp4', caption: 'Before and after, Day 1 of 90 daily edits' },
+    { file: 'videos/long-02.mp4', caption: 'AI SaaS product animation' }
+  ] },
+  { key: 'motion', title: 'Motion graphics', path: 'videos/motion', layout: 'wide', pinned: [] },
+  { key: 'ads', title: 'Ads and promos', path: 'videos/ads', layout: 'tall', pinned: [] }
+];
+
+/* ================= END EDIT ================= */
+
+(function () {
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var players = [];
+
+  /* ---------- links ---------- */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-li]'), function (a) {
+    if (LINKEDIN) { a.href = LINKEDIN; a.hidden = false; }
   });
 
-  var fl=document.getElementById('fl'),hire=document.getElementById('hire');
-  if('IntersectionObserver' in window){
-    new IntersectionObserver(function(en){fl.classList.toggle('off',en[0].isIntersecting)},{threshold:.15}).observe(hire);
+  /* ---------- video helpers ---------- */
+  var loader = ('IntersectionObserver' in window) ? new IntersectionObserver(function (en) {
+    en.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      var v = e.target;
+      if (v.dataset.src && !v.getAttribute('src')) { v.preload = 'metadata'; v.src = v.dataset.src; }
+      loader.unobserve(v);
+    });
+  }, { rootMargin: '500px 0px' }) : null;
+
+  function adopt(v, onError) {
+    v.muted = true; v.loop = true; v.playsInline = true;
+    v.setAttribute('muted', ''); v.setAttribute('playsinline', '');
+    v.addEventListener('error', function () { if (v.getAttribute('src') && onError) onError(); });
+    players.push(v);
+    if (loader) loader.observe(v); else v.src = v.dataset.src;
+  }
+
+  document.addEventListener('play', function (e) {
+    var v = e.target;
+    if (v.tagName !== 'VIDEO') return;
+    if (v._ap) { v._ap = false; v._auto = true; return; }
+    v._user = true; v._auto = false;
+    players.forEach(function (o) { if (o !== v) { o._sp = true; o.pause(); } });
+  }, true);
+  document.addEventListener('pause', function (e) {
+    var v = e.target;
+    if (v.tagName !== 'VIDEO') return;
+    if (v._sp) { v._sp = false; } else if (v._user || v._auto) { v._off = true; }
+    v._user = false; v._auto = false;
+  }, true);
+
+  /* the video nearest the middle of the screen plays muted; tap it for sound */
+  var ticking = false;
+  function pick() {
+    ticking = false;
+    var vh = window.innerHeight, best = null, bd = 1e9;
+    players.forEach(function (v) {
+      if (!v.getAttribute('src')) return;
+      var r = v.getBoundingClientRect();
+      var vis = Math.min(r.bottom, vh) - Math.max(r.top, 0);
+      if (!r.height || vis < r.height * 0.5) { v._off = false; return; }
+      var d = Math.abs((r.top + r.height / 2) - vh / 2);
+      if (d < bd) { bd = d; best = v; }
+    });
+    var userPlaying = players.some(function (v) { return !v.paused && v._user; });
+    if (userPlaying) return;
+    players.forEach(function (v) {
+      if (v === best) {
+        if (v.paused && !v._off) { v._ap = true; var p = v.play(); if (p && p.catch) p.catch(function () { v._ap = false; }); }
+      } else if (!v.paused && v._auto) { v._sp = true; v.pause(); }
+    });
+  }
+  function schedule() { if (!ticking) { ticking = true; requestAnimationFrame(pick); } }
+  if (!reduce) {
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
+    setInterval(schedule, 1200);
+  }
+
+  /* ---------- showreel ---------- */
+  var reel = document.getElementById('reelvid');
+  adopt(reel, function () { document.getElementById('showreel').hidden = true; });
+
+  /* ---------- work: pinned videos plus every video found in the GitHub folders ---------- */
+  function natural(a, b) { return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }); }
+  function isVideo(n) { return /\.(mp4|webm|m4v)$/i.test(n); }
+  function caption(name) {
+    var n = name.replace(/\.[^.]+$/, '');
+    try { n = decodeURIComponent(n); } catch (x) {}
+    n = n.replace(/^\s*\d+\s*[-_.)\s]+/, '').replace(/_+/g, ' ').replace(/-+/g, ' ').replace(/\s+/g, ' ').trim();
+    return n ? n.charAt(0).toUpperCase() + n.slice(1) : '';
+  }
+  function cacheGet(k) { try { return JSON.parse(localStorage.getItem('kk:' + k) || 'null'); } catch (x) { return null; } }
+  function cacheSet(k, v) { try { localStorage.setItem('kk:' + k, JSON.stringify(v)); } catch (x) {} }
+
+  function listFolder(g) {
+    var api = 'https://api.github.com/repos/' + GITHUB_USER + '/' + GITHUB_REPO + '/contents/' + g.path;
+    return fetch(api).then(function (r) {
+      if (r.status === 404) return [];
+      if (!r.ok) throw new Error('api');
+      return r.json();
+    }).then(function (items) {
+      var names = items.filter(function (i) { return i.type === 'file' && isVideo(i.name); })
+        .map(function (i) { return i.name; }).sort(natural);
+      cacheSet(g.key, names);
+      return names;
+    }).catch(function () { return cacheGet(g.key) || []; });
+  }
+
+  function build(g, names) {
+    var seen = {}, items = [];
+    g.pinned.forEach(function (p) { seen[p.file] = 1; items.push({ src: p.file + '#t=0.8', caption: p.caption }); });
+    names.forEach(function (n) {
+      var file = g.path + '/' + n;
+      if (seen[file]) return;
+      items.push({ src: g.path + '/' + encodeURIComponent(n) + '#t=0.8', caption: caption(n) });
+    });
+    return items;
+  }
+
+  var tabsEl = document.getElementById('tabs'), groupsEl = document.getElementById('groups'), loadmsg = document.getElementById('loadmsg');
+  var built = [];
+
+  function refreshTabs() {
+    var visible = built.filter(function (b) { return b.count > 0; });
+    visible.forEach(function (b) { b.tab.hidden = false; });
+    built.forEach(function (b) { if (b.count <= 0) { b.tab.hidden = true; b.el.hidden = true; } });
+    tabsEl.hidden = visible.length < 2;
+    if (!visible.length) { loadmsg.hidden = false; loadmsg.textContent = 'Videos are coming soon.'; }
+  }
+
+  Promise.all(GROUPS.map(function (g) { return listFolder(g).then(function (names) { return { g: g, items: build(g, names) }; }); }))
+  .then(function (res) {
+    loadmsg.hidden = true;
+
+    var all = document.createElement('button');
+    all.type = 'button'; all.className = 'tab'; all.textContent = 'All'; all.setAttribute('aria-pressed', 'true');
+    tabsEl.appendChild(all);
+
+    res.forEach(function (r) {
+      if (!r.items.length) return;
+      var g = r.g;
+      var el = document.createElement('div'); el.className = 'grp'; el.id = g.key;
+      var h = document.createElement('h3'); h.textContent = g.title;
+      var box = document.createElement('div'); box.className = g.layout === 'wide' ? 'longs' : 'vgrid';
+      el.appendChild(h); el.appendChild(box); groupsEl.appendChild(el);
+
+      var tab = document.createElement('button');
+      tab.type = 'button'; tab.className = 'tab'; tab.textContent = g.title; tab.setAttribute('aria-pressed', 'false');
+      tabsEl.appendChild(tab);
+
+      var b = { g: g, el: el, tab: tab, count: r.items.length };
+      built.push(b);
+
+      r.items.forEach(function (it) {
+        var fig = document.createElement('figure'); fig.className = 'vt' + (g.layout === 'wide' ? ' h' : '');
+        var v = document.createElement('video');
+        v.controls = true; v.preload = 'none'; v.dataset.src = it.src;
+        fig.appendChild(v);
+        if (it.caption) { var c = document.createElement('figcaption'); c.textContent = it.caption; fig.appendChild(c); }
+        box.appendChild(fig);
+        adopt(v, function () {
+          var i = players.indexOf(v); if (i > -1) players.splice(i, 1);
+          fig.remove(); b.count--; refreshTabs();
+        });
+      });
+    });
+
+    var buttons = [all].concat(built.map(function (b) { return b.tab; }));
+    buttons.forEach(function (btn, i) {
+      btn.addEventListener('click', function () {
+        buttons.forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
+        btn.setAttribute('aria-pressed', 'true');
+        built.forEach(function (b, j) { b.el.hidden = (i !== 0 && j !== i - 1) || b.count <= 0; });
+        schedule();
+      });
+    });
+    refreshTabs();
+    schedule();
+  });
+
+  /* ---------- contact form ---------- */
+  var s = document.getElementById('s'), wa = document.getElementById('wa'), go = document.getElementById('go');
+  if (WHATSAPP) {
+    wa.href = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent('Hi Kailash, I saw your portfolio and want to talk about a project.');
+    wa.hidden = false;
+    go.textContent = 'Send brief on WhatsApp';
+    document.getElementById('hl').textContent = 'Chat on WhatsApp, or fill the brief and send it there.';
+  }
+  document.getElementById('brief').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var g = function (i) { return document.getElementById(i).value.trim() || '-'; };
+    var t = 'Hi Kailash, I want to hire you.\nName: ' + g('n') + '\nNeed: ' + g('f') + '\nDeadline: ' + g('d') + '\nProject: ' + g('m');
+    if (WHATSAPP) { s.textContent = 'Opening WhatsApp.'; window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(t), '_blank', 'noopener'); return; }
+    var open = function (msg) { s.textContent = msg; window.open('https://ig.me/m/itskailashkumar', '_blank', 'noopener'); };
+    try { navigator.clipboard.writeText(t).then(function () { open('Brief copied. Paste it in the DM.'); }, function () { open('Open the DM and type your brief.'); }); }
+    catch (x) { open('Open the DM and type your brief.'); }
+  });
+
+  /* floating button hides at the contact section */
+  var fl = document.getElementById('fl'), hire = document.getElementById('hire');
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (en) { fl.classList.toggle('off', en[0].isIntersecting); }, { threshold: 0.15 }).observe(hire);
   }
 })();
 </script>
